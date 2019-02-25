@@ -1,8 +1,8 @@
 class Application 
   def call(env)
     resp = Rack::Response.new
-    
-    resp.write "#{Time.now.utc}"
+    time = Time.now.utc
+    resp.write "#{time}"
     
     resp.finish
   end 
