@@ -1,6 +1,6 @@
 class Application 
   def call(env)
-    resp = Rack::Response.authenticate_or_request_with_http_digest
+    resp = Rack::Response
     
     resp.write "#{Time.now}"
     
